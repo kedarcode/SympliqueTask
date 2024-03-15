@@ -2,6 +2,7 @@ This document outlines the implementation of API endpoints for the Remind-me-lat
 
 **API Endpoints**
 **User Registration**
+
 **Description**:
 Registers a new user with the Remind-me-later service.
 
@@ -21,6 +22,7 @@ Request Body:
 Response: HTTP 201 Created on success
 
 **Activate User**
+
 **Description**:
 Activates the user account by confirming the email address.
 
@@ -35,6 +37,7 @@ Request Body:
 Response: HTTP 200 OK on success
 
 **User Login**
+
 **Description**:
 Logs in the user and generates a JWT token for authentication.
 
@@ -54,8 +57,10 @@ Response:
 **Set Reminder**
 
 Endpoint: POST /symplique/setreminder/
+
 **Description**:
 Creates a new reminder for the user to be sent at a specified time.
+
 Request Body:
 
 {
@@ -71,8 +76,10 @@ Authorization: Bearer <generated_access_token>
 Response: HTTP 201 Created on success
 
 **Get Reminders**
+
 **Description**:
 Retrieves all reminders set by the user.
+
 Endpoint: GET /symplique/setreminder/
 
 Headers:
