@@ -59,6 +59,16 @@ class AccountStuff(APIView):
 class ReminderView(APIView):
   Authentication_classes = [TokenAuthentication]
   permission_classes = [IsAuthenticated]
+  def get(self,request):
+    try:
+      getallnotify= Reminder.objects.filter(user=request.user.id)
+      getserializer= ReminderSerializer(getallnotify,many=True)
+      return Response({'reminders':getserializer.data},status=200)
+    except Exception as e:
+      # Log the error and return a generic error response
+      print(e)
+      return Response({'error':'inernal server error , team has been notified'},status=500)
+    
   def post(self,request):
     try:
       remindata= request.data
@@ -80,10 +90,10 @@ class ReminderView(APIView):
       remindata['notifyon'] = timezone.localize(notifyon)
 
       # Validate and save the reminder data using a serializer
-      addserializer= CreateReminderSerializer(data=remindata)
+      addserializer= ReminderSerializer(data=remindata)
       if addserializer.is_valid():
         addserializer.save()
-        return Response({"message":"Created"},status=200)
+        return Response({"created":addserializer.data},status=200)
       else:
         return Response({"error":addserializer.errors},status=400)
 

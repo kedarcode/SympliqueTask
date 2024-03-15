@@ -65,5 +65,7 @@ class Reminder(models.Model):
     notifyon= models.DateTimeField(null=False,unique=True)
     message=models.TextField(null=False,blank=False)
     user=models.ForeignKey(User, models.CASCADE,related_name='user', null=False)
+    updated_at = models.DateTimeField(auto_now=True,blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True,blank=True, null=True)
     class Meta:
         db_table='Reminder'

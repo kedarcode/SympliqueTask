@@ -8,7 +8,7 @@ class UserCreateSerializer(UserCreateSerializer):
     model=User
     fields=('email','first_name','last_name','password')
   
-class CreateReminderSerializer(serializers.ModelSerializer):
+class ReminderSerializer(serializers.ModelSerializer):
   class Meta:
       model=Reminder
       fields='__all__'
