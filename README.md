@@ -6,6 +6,7 @@ This document outlines the implementation of API endpoints for the Remind-me-lat
 Endpoint: POST /symplique/auth/users/
 
 Request Body:
+
 {
     "email": "testkedar@gmail.com",
     "name": "kedar",
@@ -22,6 +23,7 @@ Response: HTTP 201 Created on success
 Endpoint: POST /symplique/auth/users/activate/
 
 Request Body:
+
 {
     "uid": "NjA",
     "token": "bqzh1r-39c5b530ddd400c42ff0bfe1a4fa2e65"
@@ -33,6 +35,7 @@ Response: HTTP 200 OK on success
 Endpoint: POST /symplique/users/login/
 
 Request Body:
+
 {
     "email": "testkedar@gmail.com",
     "password": "kedartest"
@@ -47,6 +50,7 @@ Response:
 Endpoint: POST /symplique/setreminder/
 
 Request Body:
+
 {
     "channel": "SMS",
     "message": "Do Something",
@@ -68,6 +72,7 @@ Headers:
 Authorization: Bearer <generated_access_token>
 
 Response:
+
 [
     {
         "id": 1,
