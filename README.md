@@ -34,7 +34,7 @@ Endpoint: POST /symplique/users/login/
 
 Request Body:
 {
-    "email": "kedartest@gmail.com",
+    "email": "testkedar@gmail.com",
     "password": "kedartest"
 }
 Response:
@@ -54,7 +54,9 @@ Request Body:
     "timezone": "Asia/Kolkata"
 }
 Headers:
+
 Authorization: Bearer <generated_access_token>
+
 Response: HTTP 201 Created on success
 
 **Get Reminders**
@@ -62,7 +64,9 @@ Response: HTTP 201 Created on success
 Endpoint: GET /symplique/setreminder/
 
 Headers:
+
 Authorization: Bearer <generated_access_token>
+
 Response:
 [
     {
