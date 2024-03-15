@@ -2,6 +2,7 @@ This document outlines the implementation of API endpoints for the Remind-me-lat
 
 **API Endpoints**
 **User Registration**
+
 Endpoint: POST /symplique/auth/users/
 
 Request Body:
