@@ -1,7 +1,7 @@
 This document outlines the implementation of API endpoints for the Remind-me-later project using Django, a high-level Python web framework. These endpoints facilitate user registration, authentication, setting reminders, and retrieving reminders.
 
-**API Endpoints
-****User Registration**
+**API Endpoints**
+**User Registration**
 Endpoint: POST /symplique/auth/users/
 
 Request Body:
