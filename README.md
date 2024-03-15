@@ -18,6 +18,7 @@ Request Body:
 Response: HTTP 201 Created on success
 
 **Activate User**
+
 Endpoint: POST /symplique/auth/users/activate/
 
 Request Body:
@@ -28,6 +29,7 @@ Request Body:
 Response: HTTP 200 OK on success
 
 **User Login**
+
 Endpoint: POST /symplique/users/login/
 
 Request Body:
@@ -41,6 +43,7 @@ Response:
 }
 
 **Set Reminder**
+
 Endpoint: POST /symplique/setreminder/
 
 Request Body:
@@ -55,6 +58,7 @@ Authorization: Bearer <generated_access_token>
 Response: HTTP 201 Created on success
 
 **Get Reminders**
+
 Endpoint: GET /symplique/setreminder/
 
 Headers:
