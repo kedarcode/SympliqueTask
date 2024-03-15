@@ -1,0 +1,21 @@
+.env
+
+#ignore static images
+# Ignore .pyc files
+*.pyc
+
+# Ignore __pycache__ directories
+__pycache__
+
+# Ignore Django migration files
+**/migrations/
+**/__pycache__/
+# Ignore Django migration files
+/migrations/
+static/
+# Ignore virtual environment directory
+.venv/
+#temp database
+dump.rdb
+temp-834.rdb
+vector.pickle
