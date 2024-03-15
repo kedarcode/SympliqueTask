@@ -62,6 +62,8 @@ class ReminderView(APIView):
   def post(self,request):
     try:
       remindata= request.data
+
+      # Check if 'timezone' is provided and valid
       if 'timezone' in remindata and remindata['timezone'] is not None and \
         validate_timezone(remindata['timezone']):
         pass
@@ -72,9 +74,12 @@ class ReminderView(APIView):
 
       timezone_str = remindata["timezone"]
       timezone = pytz.timezone(timezone_str)
+      
+      # Parse and localize the datetime in the specified timezone
       notifyon = datetime.strptime(remindata['notifyon'], "%Y-%m-%d %H:%M:%S")
       remindata['notifyon'] = timezone.localize(notifyon)
-      
+
+      # Validate and save the reminder data using a serializer
       addserializer= CreateReminderSerializer(data=remindata)
       if addserializer.is_valid():
         addserializer.save()
@@ -83,5 +88,6 @@ class ReminderView(APIView):
         return Response({"error":addserializer.errors},status=400)
 
     except Exception as e:
+      # Log the error and return a generic error response
       print(e)
       return Response({'error':'inernal server error , team has been notified'},status=500)
