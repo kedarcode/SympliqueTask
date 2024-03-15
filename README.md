@@ -6,12 +6,12 @@ Endpoint: POST /symplique/auth/users/
 
 Request Body:
 {
-    "email": "kedaranimate@gmail.com",
+    "email": "testkedar@gmail.com",
     "name": "kedar",
-    "password": "kedar232323",
+    "password": "kedartest",
     "first_name": "Kedar",
     "last_name": "Shelar",
-    "re_password": "kedar232323",
+    "re_password": "kedartest",
     "username": "kedar"
 }
 Response: HTTP 201 Created on success
@@ -31,8 +31,8 @@ Endpoint: POST /symplique/users/login/
 
 Request Body:
 {
-    "email": "kedaranimate@gmail.com",
-    "password": "kedar232323"
+    "email": "kedartest@gmail.com",
+    "password": "kedartest"
 }
 Response:
 {
